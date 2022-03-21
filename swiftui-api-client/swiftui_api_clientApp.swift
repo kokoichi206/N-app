@@ -11,7 +11,7 @@ import SwiftUI
 struct swiftui_api_clientApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MemberListView()
         }
     }
 }
