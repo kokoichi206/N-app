@@ -19,7 +19,8 @@
 		27D5ED4B27E8BE82002D4DBC /* MemberAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5ED4A27E8BE82002D4DBC /* MemberAPIClient.swift */; };
 		27D5ED4F27E8BEF6002D4DBC /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5ED4E27E8BEF6002D4DBC /* ViewModel.swift */; };
 		27D5ED5427E8C051002D4DBC /* Stateful.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5ED5327E8C051002D4DBC /* Stateful.swift */; };
-		27D5ED5627E8D425002D4DBC /* MemeberRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5ED5527E8D425002D4DBC /* MemeberRepository.swift */; };
+		27D5ED5627E8D425002D4DBC /* MemberRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5ED5527E8D425002D4DBC /* MemberRepository.swift */; };
+		27D5ED5827E8DB12002D4DBC /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5ED5727E8DB12002D4DBC /* ImageDownloader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,7 +37,8 @@
 		27D5ED4A27E8BE82002D4DBC /* MemberAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberAPIClient.swift; sourceTree = "<group>"; };
 		27D5ED4E27E8BEF6002D4DBC /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		27D5ED5327E8C051002D4DBC /* Stateful.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stateful.swift; sourceTree = "<group>"; };
-		27D5ED5527E8D425002D4DBC /* MemeberRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeberRepository.swift; sourceTree = "<group>"; };
+		27D5ED5527E8D425002D4DBC /* MemberRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberRepository.swift; sourceTree = "<group>"; };
+		27D5ED5727E8DB12002D4DBC /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,7 +139,7 @@
 		27D5ED4D27E8BEB9002D4DBC /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
-				27D5ED5527E8D425002D4DBC /* MemeberRepository.swift */,
+				27D5ED5527E8D425002D4DBC /* MemberRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -146,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				27D5ED5327E8C051002D4DBC /* Stateful.swift */,
+				27D5ED5727E8DB12002D4DBC /* ImageDownloader.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -226,10 +229,11 @@
 				27D5ED3727E37BDD002D4DBC /* MemberDetailView.swift in Sources */,
 				27D5ED3227E37740002D4DBC /* Member.swift in Sources */,
 				27D5ED5427E8C051002D4DBC /* Stateful.swift in Sources */,
-				27D5ED5627E8D425002D4DBC /* MemeberRepository.swift in Sources */,
+				27D5ED5627E8D425002D4DBC /* MemberRepository.swift in Sources */,
 				27D5ED3A27E37D1A002D4DBC /* Member+mock.swift in Sources */,
 				27D5ED3527E37975002D4DBC /* MemberRow.swift in Sources */,
 				27D5ED2327E37697002D4DBC /* swiftui_api_clientApp.swift in Sources */,
+				27D5ED5827E8DB12002D4DBC /* ImageDownloader.swift in Sources */,
 				27D5ED4B27E8BE82002D4DBC /* MemberAPIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

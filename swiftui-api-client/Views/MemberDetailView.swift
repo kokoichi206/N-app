@@ -15,26 +15,27 @@ struct MemberDetailView: View {
     ]
     var body: some View {
         ScrollView {
-            HStack {
-                VStack(alignment: .leading) {
-                    HStack {
-                        Image(member.img)
-                            .resizable()
-                            .frame(
-                                width: 16.0,
-                                height: 16.0
-                            )
-                        Text(member.name)
-                            .font(.caption)
-                    }
+            VStack(alignment: .center) {
+                URLImage(url: member.img).frame(width: 250, height: 250, alignment: .center)
+                VStack(alignment: .center, spacing: 0.0) {
+                        HStack {
+                            Text(member.name)
+                                .font(.largeTitle)
+                            Spacer()
+                        }
                     
-                    Text(member.name)
-                        .font(.body)
-                        .fontWeight(.semibold)
+                        HStack {
+                        Text(member.kana)
+                                .font(.caption)
+                                
+                        Text(member.englishName)
+                            .font(.caption)
+                        }
+                }
+                .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                
 
                 }
-                Spacer()
-            }
             .padding(8)
         }
         .navigationBarTitleDisplayMode(.inline)

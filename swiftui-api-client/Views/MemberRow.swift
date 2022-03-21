@@ -11,12 +11,7 @@ struct MemberRow: View {
     let member: Member
     var body: some View {
         HStack {
-            Image(member.img)
-                .resizable()
-                .frame(
-                    width: 44.0,
-                    height: 44.0
-                )
+            URLImage(url: member.img)
             VStack(alignment: .leading) {
                 Text(member.kana)
                     .font(.caption)
@@ -25,5 +20,11 @@ struct MemberRow: View {
                     .fontWeight(.semibold)
             }
         }
+    }
+}
+
+struct MemberRow_Previews: PreviewProvider {
+    static var previews: some View {
+        MemberRow(member: .mock1)
     }
 }
