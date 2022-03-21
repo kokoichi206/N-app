@@ -16,6 +16,10 @@
 		27D5ED3727E37BDD002D4DBC /* MemberDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5ED3627E37BDD002D4DBC /* MemberDetailView.swift */; };
 		27D5ED3A27E37D1A002D4DBC /* Member+mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5ED3927E37D1A002D4DBC /* Member+mock.swift */; };
 		27D5ED3C27E4E820002D4DBC /* Members.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5ED3B27E4E820002D4DBC /* Members.swift */; };
+		27D5ED4B27E8BE82002D4DBC /* MemberAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5ED4A27E8BE82002D4DBC /* MemberAPIClient.swift */; };
+		27D5ED4F27E8BEF6002D4DBC /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5ED4E27E8BEF6002D4DBC /* ViewModel.swift */; };
+		27D5ED5427E8C051002D4DBC /* Stateful.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5ED5327E8C051002D4DBC /* Stateful.swift */; };
+		27D5ED5627E8D425002D4DBC /* MemeberRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5ED5527E8D425002D4DBC /* MemeberRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +33,10 @@
 		27D5ED3627E37BDD002D4DBC /* MemberDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberDetailView.swift; sourceTree = "<group>"; };
 		27D5ED3927E37D1A002D4DBC /* Member+mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Member+mock.swift"; sourceTree = "<group>"; };
 		27D5ED3B27E4E820002D4DBC /* Members.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Members.swift; sourceTree = "<group>"; };
+		27D5ED4A27E8BE82002D4DBC /* MemberAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberAPIClient.swift; sourceTree = "<group>"; };
+		27D5ED4E27E8BEF6002D4DBC /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		27D5ED5327E8C051002D4DBC /* Stateful.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stateful.swift; sourceTree = "<group>"; };
+		27D5ED5527E8D425002D4DBC /* MemeberRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeberRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,8 +70,12 @@
 			isa = PBXGroup;
 			children = (
 				27D5ED2227E37697002D4DBC /* swiftui_api_clientApp.swift */,
-				27D5ED3027E3770A002D4DBC /* View */,
-				27D5ED3327E37746002D4DBC /* Model */,
+				27D5ED5227E8C03B002D4DBC /* Utilities */,
+				27D5ED4927E8BE70002D4DBC /* APIClients */,
+				27D5ED4D27E8BEB9002D4DBC /* Repositories */,
+				27D5ED4C27E8BEA2002D4DBC /* ViewModels */,
+				27D5ED3027E3770A002D4DBC /* Views */,
+				27D5ED3327E37746002D4DBC /* Models */,
 				27D5ED2627E37698002D4DBC /* Assets.xcassets */,
 				27D5ED2827E37698002D4DBC /* Preview Content */,
 			);
@@ -79,23 +91,23 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		27D5ED3027E3770A002D4DBC /* View */ = {
+		27D5ED3027E3770A002D4DBC /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				27D5ED2427E37697002D4DBC /* MemberListView.swift */,
 				27D5ED3627E37BDD002D4DBC /* MemberDetailView.swift */,
 				27D5ED3427E37975002D4DBC /* MemberRow.swift */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
-		27D5ED3327E37746002D4DBC /* Model */ = {
+		27D5ED3327E37746002D4DBC /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				27D5ED3127E37740002D4DBC /* Member.swift */,
 				27D5ED3B27E4E820002D4DBC /* Members.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		27D5ED3827E37CEF002D4DBC /* Mocks */ = {
@@ -104,6 +116,38 @@
 				27D5ED3927E37D1A002D4DBC /* Member+mock.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		27D5ED4927E8BE70002D4DBC /* APIClients */ = {
+			isa = PBXGroup;
+			children = (
+				27D5ED4A27E8BE82002D4DBC /* MemberAPIClient.swift */,
+			);
+			path = APIClients;
+			sourceTree = "<group>";
+		};
+		27D5ED4C27E8BEA2002D4DBC /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				27D5ED4E27E8BEF6002D4DBC /* ViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		27D5ED4D27E8BEB9002D4DBC /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				27D5ED5527E8D425002D4DBC /* MemeberRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		27D5ED5227E8C03B002D4DBC /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				27D5ED5327E8C051002D4DBC /* Stateful.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,12 +221,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				27D5ED3C27E4E820002D4DBC /* Members.swift in Sources */,
+				27D5ED4F27E8BEF6002D4DBC /* ViewModel.swift in Sources */,
 				27D5ED2527E37697002D4DBC /* MemberListView.swift in Sources */,
 				27D5ED3727E37BDD002D4DBC /* MemberDetailView.swift in Sources */,
 				27D5ED3227E37740002D4DBC /* Member.swift in Sources */,
+				27D5ED5427E8C051002D4DBC /* Stateful.swift in Sources */,
+				27D5ED5627E8D425002D4DBC /* MemeberRepository.swift in Sources */,
 				27D5ED3A27E37D1A002D4DBC /* Member+mock.swift in Sources */,
 				27D5ED3527E37975002D4DBC /* MemberRow.swift in Sources */,
 				27D5ED2327E37697002D4DBC /* swiftui_api_clientApp.swift in Sources */,
+				27D5ED4B27E8BE82002D4DBC /* MemberAPIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
