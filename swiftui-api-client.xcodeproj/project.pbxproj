@@ -21,6 +21,7 @@
 		27D5ED5427E8C051002D4DBC /* Stateful.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5ED5327E8C051002D4DBC /* Stateful.swift */; };
 		27D5ED5627E8D425002D4DBC /* MemberRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5ED5527E8D425002D4DBC /* MemberRepository.swift */; };
 		27D5ED5827E8DB12002D4DBC /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5ED5727E8DB12002D4DBC /* ImageDownloader.swift */; };
+		27D5ED5A27E9F63C002D4DBC /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5ED5927E9F63C002D4DBC /* BaseView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		27D5ED5327E8C051002D4DBC /* Stateful.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stateful.swift; sourceTree = "<group>"; };
 		27D5ED5527E8D425002D4DBC /* MemberRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberRepository.swift; sourceTree = "<group>"; };
 		27D5ED5727E8DB12002D4DBC /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
+		27D5ED5927E9F63C002D4DBC /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +99,10 @@
 			isa = PBXGroup;
 			children = (
 				27D5ED2427E37697002D4DBC /* MemberListView.swift */,
+				27D5ED5927E9F63C002D4DBC /* BaseView.swift */,
 				27D5ED3627E37BDD002D4DBC /* MemberDetailView.swift */,
 				27D5ED3427E37975002D4DBC /* MemberRow.swift */,
+				27D5ED5727E8DB12002D4DBC /* ImageDownloader.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -148,7 +152,6 @@
 			isa = PBXGroup;
 			children = (
 				27D5ED5327E8C051002D4DBC /* Stateful.swift */,
-				27D5ED5727E8DB12002D4DBC /* ImageDownloader.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27D5ED3C27E4E820002D4DBC /* Members.swift in Sources */,
+				27D5ED5A27E9F63C002D4DBC /* BaseView.swift in Sources */,
 				27D5ED4F27E8BEF6002D4DBC /* ViewModel.swift in Sources */,
 				27D5ED2527E37697002D4DBC /* MemberListView.swift in Sources */,
 				27D5ED3727E37BDD002D4DBC /* MemberDetailView.swift in Sources */,

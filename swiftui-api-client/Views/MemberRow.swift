@@ -10,14 +10,15 @@ import SwiftUI
 struct MemberRow: View {
     let member: Member
     var body: some View {
-        HStack {
+        VStack {
             URLImage(url: member.img)
-            VStack(alignment: .leading) {
-                Text(member.kana)
-                    .font(.caption)
+            VStack(alignment: .center) {
                 Text(member.name)
                     .font(.body)
                     .fontWeight(.semibold)
+                Text(member.kana)
+                    .font(.body)
+                    
             }
         }
     }
