@@ -25,10 +25,10 @@ struct BaseView: View {
                 MemberListView()
                     .tag("text.bubble")
                 
-                Text("Blog")
+                BlogListView()
                     .tag("newspaper")
                 
-                Text("Schedule")
+                ScheduleListView()
                     .tag("calendar")
              
                 Text("Formation")
@@ -49,7 +49,7 @@ struct BaseView: View {
                 TabButton(image: "gearshape.fill")
             }
             .frame(maxWidth: .infinity)
-            .padding(.top, 8)
+            .padding(.top, 12)
             .background(Color(red: 0.9, green: 0.9, blue: 0.9, opacity: 0.9))
         }
     }
