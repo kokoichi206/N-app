@@ -24,7 +24,6 @@ struct ScheduleAPIClient {
                       httpResponse.statusCode == 200 else {
                     throw URLError(.badServerResponse)
                 }
-                print("レスポンス：\(Data(String(decoding: element.data, as: UTF8.self).dropFirst(24).dropLast(3).utf8))")
                 return Data(String(decoding: element.data, as: UTF8.self).dropFirst(24).dropLast(3).utf8)
             }
             .decode(type: [Schedule].self, decoder: JSONDecoder())

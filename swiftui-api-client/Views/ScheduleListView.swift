@@ -38,7 +38,7 @@ struct ScheduleListView: View {
                             } else {
                                 
                                 // MARK: Main List about schedules
-                                MainList(schedules: schedules)
+                                MainList(schedules: SortedSchedules(schedules: schedules))
 
                             }
                         case let .failed(error):
@@ -72,50 +72,41 @@ struct ScheduleListView: View {
     
     func MainList(schedules: [Schedule]) -> some View {
         ScrollView(.vertical, showsIndicators: false) {
-            let width: CGFloat = 100
             LazyVStack {
-                ForEach((0..<GetRowNum(schedules: schedules)), id: \.self) { row in
-                    HStack(alignment: .top, spacing: 16) {
-                        ForEach(0...2, id: \.self) { col in
-                            if 3*row+col < schedules.count {
-//                                NavigationLink(
-//                                    destination: ScheduleDetailView(schedule: schedules[3*row+col])) {
-                                        OnePerson(schedule: schedules[3*row+col], width: width)
-//                                    }
-                            } else {
-                                Rectangle()
-                                    .frame(width: width)
-                                    .foregroundColor(.white)
-                            }
-                        }
-                    }
+                ForEach((0..<schedules.count), id: \.self) { index in
+                    OnePerson(schedule: schedules[index])
                 }
             }
-            .padding(.vertical, 4)
         }
     }
     
-    func GetRowNum(schedules: [Schedule]) -> Int {
-        let t = schedules.count / 3
-        if schedules.count % 3 == 0 {
-            return t
-        } else {
-            return t + 1
-        }
+    func SortedSchedules(schedules: [Schedule]) -> [Schedule] {
+        schedules.sorted(by: { $0.start_time < $1.start_time})
     }
-    
-    func OnePerson(schedule: Schedule, width: CGFloat) -> some View {
+
+    func OnePerson(schedule: Schedule) -> some View {
         VStack(alignment: .center) {
-            // MARK: Face Image
-            // MARK: Name
-            Text(schedule.title)
-                .foregroundColor(Color.purple)
-                .font(.caption)
-            Text(schedule.date)
-                .foregroundColor(Color(red: 0, green: 0, blue: 1))
-                .font(.system(size: 8, weight: .regular))
+                HStack {
+                    Text(schedule.cate)
+                        .foregroundColor(Color(red: 0, green: 0, blue: 1))
+                        .font(.system(size: 8, weight: .regular))
+                    .padding(.bottom, 4.0)
+                    Spacer()
+                }
+                .padding(.leading, 5.0)
+            HStack {
+                Text("\(schedule.start_time)~\(schedule.end_time)")
+                    .font(.system(size: 12, weight: .regular))
                 .padding(.bottom, 4.0)
-                
+                Spacer()
+            }
+            .padding(.leading, 5.0)
+            HStack {
+                Text(schedule.title)
+                    .font(.caption)
+                Spacer()
+            }
+            .padding(.leading, 5.0)
         }
         .padding(2)
     }

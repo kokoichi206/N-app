@@ -109,23 +109,23 @@ struct BlogListView: View {
         VStack(alignment: .center) {
             // MARK: Face Image
             AsyncImage(url: URL(string: blog.img)) { image in
-                image.resizable()
+                image.resizable().scaledToFill()
             } placeholder: {
-                ProgressView()
+                Image("n46").resizable().scaledToFill()
             }
-            .frame(width: 100, height: 120)
-            .aspectRatio(contentMode: .fill)
-            .cornerRadius(5)
-            .shadow(color: .gray.opacity(0.7), radius: 5)
+            .frame(width: 100, height: 100)
+            .cornerRadius(3)
+
             
             // MARK: Name
             Text(blog.name)
-                .foregroundColor(Color.purple)
-                .font(.caption)
-            Text(blog.title)
-                .foregroundColor(Color(red: 0, green: 0, blue: 1))
-                .font(.system(size: 8, weight: .regular))
-                .padding(.bottom, 4.0)
+                .foregroundColor(Color(red: 0.5, green: 0.1, blue: 0.5, opacity: 0.9))
+                .font(.system(size: 10, weight: .regular))
+                .padding(.bottom, 00.5)
+            Text(blog.date.dropLast(3))
+                .foregroundColor(Color(red: 0, green: 0, blue: 0, opacity: 0.5))
+                .font(.system(size: 11, weight: .regular))
+                .padding(.bottom, 5.0)
                 
         }
         .padding(2)

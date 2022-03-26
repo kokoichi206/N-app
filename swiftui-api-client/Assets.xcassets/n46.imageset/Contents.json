@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "490px-Nogizaka46_logo.svg.png",
+      "filename" : "n46.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "490px-Nogizaka46_logo.svg-1.png",
+      "filename" : "n46@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "490px-Nogizaka46_logo.svg-2.png",
+      "filename" : "n46@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
