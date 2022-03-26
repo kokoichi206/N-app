@@ -12,7 +12,6 @@
 		27D5ED2727E37698002D4DBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27D5ED2627E37698002D4DBC /* Assets.xcassets */; };
 		27D5ED2A27E37698002D4DBC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27D5ED2927E37698002D4DBC /* Preview Assets.xcassets */; };
 		27D5ED3227E37740002D4DBC /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5ED3127E37740002D4DBC /* Member.swift */; };
-		27D5ED3527E37975002D4DBC /* MemberRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5ED3427E37975002D4DBC /* MemberRow.swift */; };
 		27D5ED3727E37BDD002D4DBC /* MemberDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5ED3627E37BDD002D4DBC /* MemberDetailView.swift */; };
 		27D5ED3A27E37D1A002D4DBC /* Member+mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5ED3927E37D1A002D4DBC /* Member+mock.swift */; };
 		27D5ED3C27E4E820002D4DBC /* Members.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5ED3B27E4E820002D4DBC /* Members.swift */; };
@@ -20,7 +19,6 @@
 		27D5ED4F27E8BEF6002D4DBC /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5ED4E27E8BEF6002D4DBC /* ViewModel.swift */; };
 		27D5ED5427E8C051002D4DBC /* Stateful.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5ED5327E8C051002D4DBC /* Stateful.swift */; };
 		27D5ED5627E8D425002D4DBC /* MemberRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5ED5527E8D425002D4DBC /* MemberRepository.swift */; };
-		27D5ED5827E8DB12002D4DBC /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5ED5727E8DB12002D4DBC /* ImageDownloader.swift */; };
 		27D5ED5A27E9F63C002D4DBC /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5ED5927E9F63C002D4DBC /* BaseView.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,7 +29,6 @@
 		27D5ED2627E37698002D4DBC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27D5ED2927E37698002D4DBC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		27D5ED3127E37740002D4DBC /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
-		27D5ED3427E37975002D4DBC /* MemberRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberRow.swift; sourceTree = "<group>"; };
 		27D5ED3627E37BDD002D4DBC /* MemberDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberDetailView.swift; sourceTree = "<group>"; };
 		27D5ED3927E37D1A002D4DBC /* Member+mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Member+mock.swift"; sourceTree = "<group>"; };
 		27D5ED3B27E4E820002D4DBC /* Members.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Members.swift; sourceTree = "<group>"; };
@@ -39,7 +36,6 @@
 		27D5ED4E27E8BEF6002D4DBC /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		27D5ED5327E8C051002D4DBC /* Stateful.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stateful.swift; sourceTree = "<group>"; };
 		27D5ED5527E8D425002D4DBC /* MemberRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberRepository.swift; sourceTree = "<group>"; };
-		27D5ED5727E8DB12002D4DBC /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		27D5ED5927E9F63C002D4DBC /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,8 +97,6 @@
 				27D5ED2427E37697002D4DBC /* MemberListView.swift */,
 				27D5ED5927E9F63C002D4DBC /* BaseView.swift */,
 				27D5ED3627E37BDD002D4DBC /* MemberDetailView.swift */,
-				27D5ED3427E37975002D4DBC /* MemberRow.swift */,
-				27D5ED5727E8DB12002D4DBC /* ImageDownloader.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -235,9 +229,7 @@
 				27D5ED5427E8C051002D4DBC /* Stateful.swift in Sources */,
 				27D5ED5627E8D425002D4DBC /* MemberRepository.swift in Sources */,
 				27D5ED3A27E37D1A002D4DBC /* Member+mock.swift in Sources */,
-				27D5ED3527E37975002D4DBC /* MemberRow.swift in Sources */,
 				27D5ED2327E37697002D4DBC /* swiftui_api_clientApp.swift in Sources */,
-				27D5ED5827E8DB12002D4DBC /* ImageDownloader.swift in Sources */,
 				27D5ED4B27E8BE82002D4DBC /* MemberAPIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

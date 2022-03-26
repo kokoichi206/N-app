@@ -39,7 +39,7 @@ struct BaseView: View {
             }
             
             // Custom Tab Bar...
-            HStack(spacing: 40) {
+            HStack(spacing: 50) {
                 
                 // Tab Buttons...
                 TabButton(image: "person.text.rectangle")
@@ -50,6 +50,7 @@ struct BaseView: View {
             }
             .frame(maxWidth: .infinity)
             .padding(.top, 8)
+            .background(Color(red: 0.9, green: 0.9, blue: 0.9, opacity: 0.9))
         }
     }
     

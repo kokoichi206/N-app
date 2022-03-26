@@ -15,46 +15,78 @@ struct MemberDetailView: View {
     ]
     @Environment(\.dismiss) var dismiss
     var body: some View {
-        ScrollView {
-            VStack(alignment: .center) {
-                URLImage(url: member.img).frame(width: 300, height: 300, alignment: .center)
+        ZStack {
+            Color.white.edgesIgnoringSafeArea(.all)
+            ScrollView {
                 VStack(alignment: .center) {
-                    HStack() {
-                            Text(member.name)
-                                .font(.largeTitle)
-                                .foregroundColor(.purple)
+                    AsyncImage(url: URL(string: member.img)) { image in
+                        image.resizable()
+                    } placeholder: {
+                        ProgressView()
                     }
+                    .frame(width: 250, height: 300)
+                    .aspectRatio(contentMode: .fill)
+                    .cornerRadius(5)
+                    .shadow(color: .gray.opacity(0.7), radius: 5)
+                    VStack(alignment: .center) {
+                                Text(member.name)
+                                    .font(.largeTitle)
+                                    .foregroundColor(Color(red: 0.5, green: 0.1, blue: 0.5, opacity: 0.9))
+                            HStack {
+                                Text(member.kana)
+                                Text(member.englishName)
+                            }                              .font(.caption2)
+                            .foregroundColor(Color(red: 0.7, green: 0.2, blue: 0.7, opacity: 0.4))
+                        VStack {
+                            HStack {
+                                Text("生年月日")
+                                Text(member.birthDay)
+                            }
+                            HStack {
+                                Text("血液型")
+                                Text("\(member.blood)型")
+                            }
+                            HStack {
+                                Text("星座")
+                                Text(member.constellation)
+                            }
+                            HStack {
+                                Text("身長")
+                                    
+                                Text("未定")
+                            }
+                            HStack {
+                                Text("SNS")
+                                Text(member.img)
+                            }
+                            HStack {
+                                Text("SNS")
+                                Text(member.groupcode)
+                            }
+                        }.foregroundColor(Color(red: 0.5, green: 0.1, blue: 0.5, opacity: 0.9))
+                            .font(.system(size: 10, weight: .regular))
+                    }
+                    .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
                     
-                        HStack {
-                        Text(member.kana)
-                                .font(.caption)
-                                .foregroundColor(.purple)
-                                
-                        Text(member.englishName)
-                            .font(.caption)
-                            .foregroundColor(.purple)
-                        }
-                }
-                .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-                
 
-                }
-            .padding(8)
-        }
-        .navigationTitle(member.name)
-        .navigationBarTitleDisplayMode(.inline)
-        .navigationBarBackButtonHidden(true)
-        .toolbar {
-            
-            ToolbarItem(placement: .navigationBarLeading) {
-                Button(
-                    action: {
-                        dismiss()
-                    }, label: {
-                        Image(systemName: "chevron.backward")
                     }
-                ).tint(.white)
+                .padding(8)
             }
+            .navigationTitle(member.name)
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarBackButtonHidden(true)
+            .toolbar {
+                
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button(
+                        action: {
+                            dismiss()
+                        }, label: {
+                            Image(systemName: "chevron.backward")
+                        }
+                    ).tint(.white)
+                }
+        }
         }
         
     }

@@ -25,79 +25,42 @@ struct MemberListView: View {
     }
     
     var body: some View {
-        
-//        NavigationView {
-//            Group {
-//                switch viewModel.members {
-//                case .idle, .loading:
-//                    ProgressView("loading...")
-//                case .failed:
-//                    VStack {
-//                        Group {
-//                            Image("GitHubMark")
-//                            Text("Failed to load members")
-//                                .padding(.top, 4)
-//                        }
-//                        .foregroundColor(.black)
-//                        .opacity(0.4)
-//                        Button(
-//                            action: {
-//                                viewModel.onRetryButtonTapped() // リトライボタンをタップしたときに再度リクエストを投げる
-//                            },
-//                            label: {
-//                                Text("Retry")
-//                                    .fontWeight(.bold)
-//                            }
-//                        )
-//                            .padding(.top, 8)
-//                    }
-//                case let .loaded(members):
-//                    if members.isEmpty {
-//                        Text("No members")
-//                            .fontWeight(.bold)
-//                    } else {
-//                        List(members) { member in
-//                            if (member.graduation == "NO" && member.id != "10001") {
-//                            NavigationLink(
-//                                destination: MemberDetailView(member: member)) {
-//                                    MemberRow(member: member)
-//                                }
-//                            }
-//                        }
-//                    }
-//                }
-//            }
-//            .navigationBarTitle("メンバー", displayMode: .inline)
-//        }
-//        .onAppear {
-//            viewModel.onAppear()
-//        }
-        
         VStack(alignment: .leading, spacing: 8) {
             NavigationView {
-                Group {
-                    switch viewModel.members {
-                    case .idle, .loading:
-                        ProgressView("loading...")
-                    case let .loaded(members):
-                        if members.isEmpty {
-                            Text("something wrong about API.")
-                        } else {
-                            
-                            // MARK: Main List about members
-                            MainList(members: members)
-                        }
-                    case let .failed(error):
+                ZStack {
+                    Color.white.edgesIgnoringSafeArea(.all)
+                    Group {
+                        switch viewModel.members {
+                        case .idle, .loading:
+                            ProgressView("loading...")
+                        case let .loaded(members):
+                            if members.isEmpty {
+                                Text("something wrong about API.")
+                            } else {
+                                
+                                // MARK: Main List about members
+                                MainList(members: fileteredMembers(members: members, cate: "期生"))
 
-                        Text(error.localizedDescription)
+                            }
+                        case let .failed(error):
+
+                            Text(error.localizedDescription)
+                        }
                     }
+                    .navigationBarTitle("メンバー", displayMode: .inline)
                 }
-                .navigationBarTitle("メンバー", displayMode: .inline)
             }
             .onAppear {
                 viewModel.onAppear()
             }
         }
+    }
+    
+    func fileteredMembers(members: [Member], cate: String) -> [Member] {
+        let filteredMembers = members.filter {
+            $0.cate.hasSuffix(cate)
+        }
+        return filteredMembers.sorted(by: {$0.kana < $1.kana})
     }
     
     func DoubleDivider(show: Bool = true) -> some View {
@@ -130,6 +93,7 @@ struct MemberListView: View {
                             } else {
                                 Rectangle()
                                     .frame(width: width)
+                                    .foregroundColor(.white)
                             }
                         }
                     }
@@ -158,12 +122,17 @@ struct MemberListView: View {
             }
             .frame(width: 100, height: 120)
             .aspectRatio(contentMode: .fill)
+            .cornerRadius(5)
+            .shadow(color: .gray.opacity(0.7), radius: 5)
             
             // MARK: Name
             Text(member.name)
                 .foregroundColor(Color.purple)
-                .padding(.vertical, 4)
-                
+                .font(.caption)
+            Text(member.kana)
+                .foregroundColor(Color(red: 0, green: 0, blue: 1))
+                .font(.system(size: 8, weight: .regular))
+                .padding(.bottom, 4.0)
                 
         }
         .padding(2)
