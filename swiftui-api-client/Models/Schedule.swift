@@ -31,3 +31,13 @@ struct Schedule: Identifiable, Codable {
         case arti_code
     }
 }
+
+struct Schedules: Codable {
+    var count: String
+    var data: [Schedule]
+    
+    private enum CodingKeys: String, CodingKey {
+        case count
+        case data
+    }
+}
