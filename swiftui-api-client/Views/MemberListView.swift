@@ -18,14 +18,13 @@ struct MemberListView: View {
     func setupNavigationBar() {
         let appearance = UINavigationBarAppearance()
         appearance.configureWithOpaqueBackground()
-        appearance.backgroundColor = .purple
+        appearance.backgroundColor = .systemPurple
         appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
         UINavigationBar.appearance().standardAppearance = appearance
         UINavigationBar.appearance().scrollEdgeAppearance = appearance
     }
     
     var body: some View {
-        
         
 //        NavigationView {
 //            Group {

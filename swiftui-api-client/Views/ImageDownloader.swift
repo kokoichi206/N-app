@@ -40,7 +40,7 @@ struct URLImage: View {
                 Image(uiImage: img!)
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 200, height: 200)
+                    .frame(width: 300, height: 300)
             }
         } else {
             return VStack {
@@ -54,10 +54,11 @@ struct URLImage: View {
     }
 }
 
-struct ContentView: View {
+struct ContentsView: View {
     private let mockMembers: [Member] = [
         .mock1
     ]
+
     var body: some View {
         VStack {
             URLImage(url: mockMembers[0].img)
@@ -67,6 +68,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentsView()
     }
 }
