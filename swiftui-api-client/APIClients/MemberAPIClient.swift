@@ -10,7 +10,7 @@ import Combine
 
 struct MemberAPIClient {
     func getMembers() -> AnyPublisher<[Member], Error> {
-        let url = URL(string: "https://www.nogizaka46.com/s/n46/api/list/member")!
+        let url = URL(string: "https://www.nogizaka46.com/s/n46/api/list/member?so=AB?")!
 
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = "GET"

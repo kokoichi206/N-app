@@ -77,6 +77,7 @@ struct ScheduleListView: View {
                     OnePerson(schedule: schedules[index])
                 }
             }
+            .padding(.top, 8)
         }
     }
     
@@ -85,30 +86,31 @@ struct ScheduleListView: View {
     }
 
     func OnePerson(schedule: Schedule) -> some View {
-        VStack(alignment: .center) {
+        ZStack {
+            Color(red: 0.5, green: 0.5, blue: 0.5, opacity: 0.1).edgesIgnoringSafeArea(.all)
+            VStack(alignment: .center) {
+                    HStack {
+                        Text(schedule.cate)
+                            .foregroundColor(Color(red: 1, green: 1, blue: 1))
+                            .font(.system(size: 10, weight: .regular))
+                            .background(.orange)
+                        Spacer()
+                        Text(schedule.date)
+                            .foregroundColor(Color(red: 0.3, green: 0.3, blue: 0.3, opacity: 0.4))
+                            .font(.system(size: 8, weight: .regular))
+                    }
+                    .padding(.all, 5.0)
                 HStack {
-                    Text(schedule.cate)
-                        .foregroundColor(Color(red: 0, green: 0, blue: 1))
-                        .font(.system(size: 8, weight: .regular))
-                    .padding(.bottom, 4.0)
+                    Text(schedule.title)
+                        .font(.caption)
                     Spacer()
                 }
                 .padding(.leading, 5.0)
-            HStack {
-                Text("\(schedule.start_time)~\(schedule.end_time)")
-                    .font(.system(size: 12, weight: .regular))
-                .padding(.bottom, 4.0)
-                Spacer()
             }
-            .padding(.leading, 5.0)
-            HStack {
-                Text(schedule.title)
-                    .font(.caption)
-                Spacer()
-            }
-            .padding(.leading, 5.0)
+            .padding(2)
         }
-        .padding(2)
+        .cornerRadius(6)
+        .padding(.horizontal, 5)
     }
 }
 

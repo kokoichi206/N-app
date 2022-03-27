@@ -79,10 +79,10 @@ struct BlogListView: View {
                     HStack(alignment: .top, spacing: 16) {
                         ForEach(0...2, id: \.self) { col in
                             if 3*row+col < blogs.count {
-//                                NavigationLink(
-//                                    destination: BlogDetailView(blog: blogs[3*row+col])) {
+                                NavigationLink(
+                                    destination: BlogDetailView(blog: blogs[3*row+col])) {
                                         OnePerson(blog: blogs[3*row+col], width: width)
-//                                    }
+                                    }
                             } else {
                                 Rectangle()
                                     .frame(width: width)
