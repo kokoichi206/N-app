@@ -91,25 +91,28 @@ struct ScheduleListView: View {
             VStack(alignment: .center) {
                     HStack {
                         Text(schedule.cate)
-                            .foregroundColor(Color(red: 1, green: 1, blue: 1))
-                            .font(.system(size: 10, weight: .regular))
+                            .padding(.vertical, 2)
+                            .padding(.horizontal, 10)
+                            .foregroundColor(.white)
+                            .font(.system(size: 10, weight: .bold))
                             .background(.orange)
                         Spacer()
                         Text(schedule.date)
-                            .foregroundColor(Color(red: 0.3, green: 0.3, blue: 0.3, opacity: 0.4))
+                            .foregroundColor(Color(red: 0.9, green: 0.9, blue: 0.9, opacity: 0.1))
                             .font(.system(size: 8, weight: .regular))
                     }
-                    .padding(.all, 5.0)
+                    .padding(.all, 6)
                 HStack {
                     Text(schedule.title)
                         .font(.caption)
+                        .foregroundColor(.black)
                     Spacer()
                 }
-                .padding(.leading, 5.0)
+                .padding(.bottom, 8)
             }
             .padding(2)
         }
-        .cornerRadius(6)
+        .cornerRadius(4)
         .padding(.horizontal, 5)
     }
 }
