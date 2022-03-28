@@ -24,10 +24,10 @@ struct MemberDetailView: View {
                     } placeholder: {
                         ProgressView()
                     }
+                    .scaledToFill()
                     .frame(width: 250, height: 300)
-                    .aspectRatio(contentMode: .fill)
                     .cornerRadius(5)
-                    .shadow(color: .gray.opacity(0.7), radius: 5)
+
                     VStack(alignment: .center) {
                                 Text(member.name)
                                     .font(.largeTitle)
