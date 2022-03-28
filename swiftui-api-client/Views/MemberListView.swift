@@ -37,10 +37,34 @@ struct MemberListView: View {
                             if members.isEmpty {
                                 Text("something wrong about API.")
                             } else {
-                                
-                                // MARK: Main List about members
-                                MainList(members: fileteredMembers(members: members, cate: "期生"))
-
+                                ScrollView(.vertical, showsIndicators: false) {
+                                    VStack {
+                                        Text("1期生").foregroundColor(.purple).font(.headline).padding(.top, 10)
+                                    // MARK: Main List about members
+                                    MainList(members: fileteredMembers(members: members, cate: "1期生"))
+                                    }
+                                    Divider().opacity(0.3)
+                                    VStack {
+                                        Text("2期生").foregroundColor(.purple).font(.headline).padding(.top, 10)
+                                    
+                                    MainList(members: fileteredMembers(members: members, cate: "2期生"))
+                                    }
+                                    Divider().opacity(0.3)
+                                    VStack {
+                                        Text("3期生").foregroundColor(.purple).font(.headline).padding(.top, 10)
+                                    MainList(members: fileteredMembers(members: members, cate: "3期生"))
+                                    }
+                                    Divider().opacity(0.3)
+                                    VStack {
+                                        Text("4期生").foregroundColor(.purple).font(.headline).padding(.top, 10)
+                                    MainList(members: fileteredMembers(members: members, cate: "4期生"))
+                                    }
+                                    Divider().opacity(0.3)
+                                    VStack {
+                                        Text("5期生").foregroundColor(.purple).font(.headline).padding(.top, 10)
+                                    MainList(members: fileteredMembers(members: members, cate: "5期生"))
+                                    }
+                                }
                             }
                         case let .failed(error):
 
@@ -66,12 +90,10 @@ struct MemberListView: View {
     func DoubleDivider(show: Bool = true) -> some View {
         VStack(spacing: 2) {
             Rectangle()
-                .padding(0)
                 .foregroundColor(Color.purple)
                 .opacity((show ? 1 : 0))
                 .frame(height: 2)
             Rectangle()
-                .padding(0)
                 .foregroundColor(Color.purple)
                 .opacity((show ? 1 : 0))
                 .frame(height: 2)
@@ -79,8 +101,6 @@ struct MemberListView: View {
     }
     
     func MainList(members: [Member]) -> some View {
-        ScrollView(.vertical, showsIndicators: false) {
-            let width: CGFloat = 100
             LazyVStack {
                 ForEach((0..<GetRowNum(members: members)), id: \.self) { row in
                     HStack(alignment: .top, spacing: 16) {
@@ -88,18 +108,17 @@ struct MemberListView: View {
                             if 3*row+col < members.count {
                                 NavigationLink(
                                     destination: MemberDetailView(member: members[3*row+col])) {
-                                        OnePerson(member: members[3*row+col], width: width)
+                                        OnePerson(member: members[3*row+col], width: 100)
                                     }
                             } else {
                                 Rectangle()
-                                    .frame(width: width)
+                                    .frame(width: 100)
                                     .foregroundColor(.white)
                             }
                         }
                     }
                 }
             }
-            .padding(.vertical, 4)
         }
     }
     
@@ -116,14 +135,11 @@ struct MemberListView: View {
         VStack(alignment: .center) {
             // MARK: Face Image
             AsyncImage(url: URL(string: member.img)) { image in
-                image.resizable()
+                image.resizable().scaledToFill().frame(width: 100, height: 120)
             } placeholder: {
-                ProgressView()
+                ProgressView().frame(width: 100, height: 120)
             }
-            .frame(width: 100, height: 120)
-            .aspectRatio(contentMode: .fill)
             .cornerRadius(5)
-            .shadow(color: .gray.opacity(0.7), radius: 5)
             
             // MARK: Name
             Text(member.name)
@@ -136,7 +152,6 @@ struct MemberListView: View {
                 
         }
         .padding(2)
-    }
 }
 
 struct Content_Previews: PreviewProvider {
