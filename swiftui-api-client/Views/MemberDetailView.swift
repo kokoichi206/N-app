@@ -39,32 +39,38 @@ struct MemberDetailView: View {
                             .foregroundColor(Color(red: 0.7, green: 0.2, blue: 0.7, opacity: 0.4))
                         VStack {
                             HStack {
-                                Text("生年月日")
-                                Text(member.birthDay)
-                            }
+                                Text("生年月日").frame(width: 100)
+                                Text(member.birthDay).frame(width: 100)
+                                Spacer()
+                            }.padding(.bottom, 1)
                             HStack {
-                                Text("血液型")
-                                Text("\(member.blood)型")
-                            }
+                                Text("血液型").frame(width: 100)
+                                Text(member.blood).frame(width: 100)
+                                Spacer()
+                            }.padding(.bottom, 1)
                             HStack {
-                                Text("星座")
-                                Text(member.constellation)
-                            }
+                                Text("星座").frame(width: 100)
+                                Text(member.constellation).frame(width: 100)
+                                Spacer()
+                            }.padding(.bottom, 1)
                             HStack {
-                                Text("身長")
-                                    
-                                Text("未定")
-                            }
+                                Text("身長").frame(width: 100)
+                                Text("未定").frame(width: 100)
+                                Spacer()
+                            }.padding(.bottom, 1)
                             HStack {
-                                Text("SNS")
-                                Text(member.img)
-                            }
-                            HStack {
-                                Text("SNS")
-                                Text(member.groupcode)
-                            }
-                        }.foregroundColor(Color(red: 0.5, green: 0.1, blue: 0.5, opacity: 0.9))
-                            .font(.system(size: 10, weight: .regular))
+                                Text("SNS").frame(width: 100)
+                                Link(destination: URL(string: member.img)!, label: {
+                                        Label("instagram", systemImage: "camera")
+                                            .foregroundColor(.blue)
+                                            .frame(width: 100)
+                                })
+                                Spacer()
+                            }.padding(.bottom, 1)
+                        }
+                        .foregroundColor(Color(red: 0.5, green: 0.1, blue: 0.5, opacity: 0.9))
+                        .font(.system(size: 10, weight: .regular))
+                        .padding(.vertical, 4)
                     }
                     .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
                     
