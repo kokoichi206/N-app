@@ -34,6 +34,9 @@ struct BaseView: View {
                 NewsListView()
                     .tag("newspaper")
                 
+                MovieListView()
+                    .tag("film.fill")
+                
                 Text("Formation")
                     .tag("person.3.fill")
                 
@@ -49,6 +52,7 @@ struct BaseView: View {
                 TabButton(image: "book")
                 TabButton(image: "calendar")
                 TabButton(image: "newspaper")
+                TabButton(image: "film.fill")
                 TabButton(image: "person.3.fill")
                 TabButton(image: "gearshape.fill")
             }

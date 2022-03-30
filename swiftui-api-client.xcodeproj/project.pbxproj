@@ -37,6 +37,8 @@
 		27B6EC5727F4943F00F1A75A /* LiveRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B6EC5627F4943F00F1A75A /* LiveRepository.swift */; };
 		27B6EC5927F4960E00F1A75A /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B6EC5827F4960E00F1A75A /* NewsViewModel.swift */; };
 		27B6EC5B27F49E7400F1A75A /* NewsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B6EC5A27F49E7400F1A75A /* NewsListView.swift */; };
+		27B6EC5D27F49FF300F1A75A /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B6EC5C27F49FF300F1A75A /* MovieViewModel.swift */; };
+		27B6EC5F27F4A06700F1A75A /* MovieListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B6EC5E27F4A06700F1A75A /* MovieListView.swift */; };
 		27D5ED2327E37697002D4DBC /* swiftui_api_clientApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5ED2227E37697002D4DBC /* swiftui_api_clientApp.swift */; };
 		27D5ED2527E37697002D4DBC /* MemberListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5ED2427E37697002D4DBC /* MemberListView.swift */; };
 		27D5ED2727E37698002D4DBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27D5ED2627E37698002D4DBC /* Assets.xcassets */; };
@@ -82,6 +84,8 @@
 		27B6EC5627F4943F00F1A75A /* LiveRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveRepository.swift; sourceTree = "<group>"; };
 		27B6EC5827F4960E00F1A75A /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
 		27B6EC5A27F49E7400F1A75A /* NewsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListView.swift; sourceTree = "<group>"; };
+		27B6EC5C27F49FF300F1A75A /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
+		27B6EC5E27F4A06700F1A75A /* MovieListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListView.swift; sourceTree = "<group>"; };
 		27D5ED1F27E37697002D4DBC /* swiftui-api-client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swiftui-api-client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27D5ED2227E37697002D4DBC /* swiftui_api_clientApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftui_api_clientApp.swift; sourceTree = "<group>"; };
 		27D5ED2427E37697002D4DBC /* MemberListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberListView.swift; sourceTree = "<group>"; };
@@ -159,6 +163,7 @@
 				27B6EC2427EF7E2900F1A75A /* BlogListView.swift */,
 				27B6EC3427EFAC5700F1A75A /* BlogDetailView.swift */,
 				27B6EC5A27F49E7400F1A75A /* NewsListView.swift */,
+				27B6EC5E27F4A06700F1A75A /* MovieListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -210,6 +215,7 @@
 				27B6EC2627EF7EFC00F1A75A /* BlogViewModel.swift */,
 				27B6EC3027EF84B200F1A75A /* ScheduleViewModel.swift */,
 				27B6EC5827F4960E00F1A75A /* NewsViewModel.swift */,
+				27B6EC5C27F49FF300F1A75A /* MovieViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -329,12 +335,14 @@
 				27B6EC4727F48A4A00F1A75A /* HandShake.swift in Sources */,
 				27D5ED5627E8D425002D4DBC /* MemberRepository.swift in Sources */,
 				27B6EC3127EF84B200F1A75A /* ScheduleViewModel.swift in Sources */,
+				27B6EC5D27F49FF300F1A75A /* MovieViewModel.swift in Sources */,
 				27B6EC2527EF7E2900F1A75A /* BlogListView.swift in Sources */,
 				27B6EC5327F4942400F1A75A /* MovieRepository.swift in Sources */,
 				27B6EC3527EFAC5700F1A75A /* BlogDetailView.swift in Sources */,
 				27B6EC3B27F4893000F1A75A /* LiveAPIClient.swift in Sources */,
 				27B6EC4327F48A3000F1A75A /* News.swift in Sources */,
 				27B6EC2D27EF828A00F1A75A /* Schedule.swift in Sources */,
+				27B6EC5F27F4A06700F1A75A /* MovieListView.swift in Sources */,
 				27B6EC2327EF7CC600F1A75A /* Blog.swift in Sources */,
 				27B6EC2F27EF847200F1A75A /* ScheduleRepository.swift in Sources */,
 				27D5ED3A27E37D1A002D4DBC /* Member+mock.swift in Sources */,
