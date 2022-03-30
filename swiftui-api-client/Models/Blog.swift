@@ -32,3 +32,12 @@ struct Blog: Identifiable, Codable {
     }
 }
 
+struct BlogList: Codable {
+    var count: String
+    var data: [Blog]
+    
+    private enum CodingKeys: String, CodingKey {
+        case count
+        case data
+    }
+}

@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 struct ScheduleAPIClient {
-    func getSchedules() -> AnyPublisher<[Schedule], Error> {
+    func getSchedules() -> AnyPublisher<ScheduleList, Error> {
         let url = URL(string: "https://www.nogizaka46.com/s/n46/api/list/schedule?dy=202203")!
 
         var urlRequest = URLRequest(url: url)
@@ -24,9 +24,9 @@ struct ScheduleAPIClient {
                       httpResponse.statusCode == 200 else {
                     throw URLError(.badServerResponse)
                 }
-                return Data(String(decoding: element.data, as: UTF8.self).dropFirst(26).dropLast(3).utf8)
+                return Data(String(decoding: element.data, as: UTF8.self).dropFirst(4).dropLast(2).utf8)
             }
-            .decode(type: [Schedule].self, decoder: JSONDecoder())
+            .decode(type: ScheduleList.self, decoder: JSONDecoder())
             .eraseToAnyPublisher()
     }
 }

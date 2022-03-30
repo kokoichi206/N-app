@@ -32,7 +32,7 @@ struct Schedule: Identifiable, Codable {
     }
 }
 
-struct Schedules: Codable {
+struct ScheduleList: Codable {
     var count: String
     var data: [Schedule]
     
@@ -40,4 +40,8 @@ struct Schedules: Codable {
         case count
         case data
     }
+}
+
+enum ScheduleCate {
+    case book, release, web, musical, movie, meet, live, tv, radio, birthday
 }

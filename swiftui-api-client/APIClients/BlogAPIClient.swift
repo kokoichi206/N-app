@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 struct BlogAPIClient {
-    func getBlogs() -> AnyPublisher<[Blog], Error> {
+    func getBlogs() -> AnyPublisher<BlogList, Error> {
         let url = URL(string: "https://www.nogizaka46.com/s/n46/api/list/blog")!
 
         var urlRequest = URLRequest(url: url)
@@ -24,9 +24,9 @@ struct BlogAPIClient {
                       httpResponse.statusCode == 200 else {
                     throw URLError(.badServerResponse)
                 }
-                return Data(String(decoding: element.data, as: UTF8.self).dropFirst(27).dropLast(3).utf8)
+                return Data(String(decoding: element.data, as: UTF8.self).dropFirst(4).dropLast(2).utf8)
             }
-            .decode(type: [Blog].self, decoder: JSONDecoder())
+            .decode(type: BlogList.self, decoder: JSONDecoder())
             .eraseToAnyPublisher()
     }
 }

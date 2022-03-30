@@ -30,39 +30,39 @@ struct MemberListView: View {
                 ZStack {
                     Color.white.edgesIgnoringSafeArea(.all)
                     Group {
-                        switch viewModel.members {
+                        switch viewModel.memberList {
                         case .idle, .loading:
                             ProgressView("loading...")
                         case let .loaded(members):
-                            if members.isEmpty {
+                            if members.data.isEmpty {
                                 Text("something wrong about API.")
                             } else {
                                 ScrollView(.vertical, showsIndicators: false) {
                                     VStack {
                                         Text("1期生").foregroundColor(.purple).font(.headline).padding(.top, 10)
                                     // MARK: Main List about members
-                                    MainList(members: fileteredMembers(members: members, cate: "1期生"))
+                                        MainList(members: fileteredMembers(members: members.data, cate: "1期生"))
                                     }
                                     Divider().opacity(0.3)
                                     VStack {
                                         Text("2期生").foregroundColor(.purple).font(.headline).padding(.top, 10)
                                     
-                                    MainList(members: fileteredMembers(members: members, cate: "2期生"))
+                                    MainList(members: fileteredMembers(members: members.data, cate: "2期生"))
                                     }
                                     Divider().opacity(0.3)
                                     VStack {
                                         Text("3期生").foregroundColor(.purple).font(.headline).padding(.top, 10)
-                                    MainList(members: fileteredMembers(members: members, cate: "3期生"))
+                                    MainList(members: fileteredMembers(members: members.data, cate: "3期生"))
                                     }
                                     Divider().opacity(0.3)
                                     VStack {
                                         Text("4期生").foregroundColor(.purple).font(.headline).padding(.top, 10)
-                                    MainList(members: fileteredMembers(members: members, cate: "4期生"))
+                                    MainList(members: fileteredMembers(members: members.data, cate: "4期生"))
                                     }
                                     Divider().opacity(0.3)
                                     VStack {
                                         Text("5期生").foregroundColor(.purple).font(.headline).padding(.top, 10)
-                                    MainList(members: fileteredMembers(members: members, cate: "5期生"))
+                                    MainList(members: fileteredMembers(members: members.data, cate: "5期生"))
                                     }
                                 }
                             }

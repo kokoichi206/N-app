@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 struct BlogRepository {
-    func fetchBlogs() -> AnyPublisher<[Blog], Error> {
+    func fetchBlogs() -> AnyPublisher<BlogList, Error> {
         BlogAPIClient().getBlogs()
     }
 }

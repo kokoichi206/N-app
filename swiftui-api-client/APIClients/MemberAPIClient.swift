@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 struct MemberAPIClient {
-    func getMembers() -> AnyPublisher<[Member], Error> {
+    func getMembers() -> AnyPublisher<MemberList, Error> {
         let url = URL(string: "https://www.nogizaka46.com/s/n46/api/list/member?so=AB?")!
 
         var urlRequest = URLRequest(url: url)
@@ -24,9 +24,9 @@ struct MemberAPIClient {
                       httpResponse.statusCode == 200 else {
                     throw URLError(.badServerResponse)
                 }
-                return Data(String(decoding: element.data, as: UTF8.self).dropFirst(25).dropLast(3).utf8)
+                return Data(String(decoding: element.data, as: UTF8.self).dropFirst(4).dropLast(2).utf8)
             }
-            .decode(type: [Member].self, decoder: JSONDecoder())
+            .decode(type: MemberList.self, decoder: JSONDecoder())
             .eraseToAnyPublisher()
     }
 }

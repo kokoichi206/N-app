@@ -20,12 +20,11 @@ struct BlogDetailView: View {
             ScrollView {
                 VStack(alignment: .center) {
                     AsyncImage(url: URL(string: blog.img)) { image in
-                        image.resizable()
+                        image.resizable().scaledToFill()
                     } placeholder: {
                         ProgressView()
                     }
                     .frame(width: 250, height: 300)
-                    .aspectRatio(contentMode: .fill)
                     .cornerRadius(5)
                     .shadow(color: .gray.opacity(0.7), radius: 5)
                     VStack(alignment: .center) {

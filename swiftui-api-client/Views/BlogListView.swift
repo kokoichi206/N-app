@@ -30,16 +30,16 @@ struct BlogListView: View {
                 ZStack {
                     Color.white.edgesIgnoringSafeArea(.all)
                     Group {
-                        switch viewModel.blogs {
+                        switch viewModel.blogList {
                         case .idle, .loading:
                             ProgressView("loading...")
                         case let .loaded(blogs):
-                            if blogs.isEmpty {
+                            if blogs.data.isEmpty {
                                 Text("something wrong about API.")
                             } else {
                                 
                                 // MARK: Main List about blogs
-                                MainList(blogs: blogs)
+                                MainList(blogs: blogs.data)
 
                             }
                         case let .failed(error):

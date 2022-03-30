@@ -92,7 +92,7 @@ struct MemberDetailView: View {
                         }
                     ).tint(.white)
                 }
-        }
+            }
         }
         
     }

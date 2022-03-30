@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 class ScheduleListViewModel: ObservableObject {
-    @Published private(set) var schedules: Stateful<[Schedule]> = .idle
+    @Published private(set) var scheduleList: Stateful<ScheduleList> = .idle
 
     private var cancellables = Set<AnyCancellable>()
 
@@ -24,18 +24,18 @@ class ScheduleListViewModel: ObservableObject {
     private func loadSchedules() {
         ScheduleRepository().fetchSchedules()
             .handleEvents(receiveSubscription: { [weak self] _ in
-                self?.schedules = .loading
+                self?.scheduleList = .loading
             })
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { [weak self] completion in
                 switch completion {
                 case .failure(let error):
                     print("Error: \(error)")
-                    self?.schedules = .failed(error)
+                    self?.scheduleList = .failed(error)
                 case .finished: print("Finished")
                 }
             }, receiveValue: { [weak self] schedules in
-                self?.schedules = .loaded(schedules)
+                self?.scheduleList = .loaded(schedules)
             }
             ).store(in: &cancellables)
     }

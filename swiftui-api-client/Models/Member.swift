@@ -43,3 +43,13 @@ struct Member: Identifiable, Codable {
         case under
     }
 }
+
+struct MemberList: Codable {
+    var count: String
+    var data: [Member]
+    
+    private enum CodingKeys: String, CodingKey {
+        case count
+        case data
+    }
+}

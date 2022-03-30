@@ -29,16 +29,16 @@ struct ScheduleListView: View {
                 ZStack {
                     Color.white.edgesIgnoringSafeArea(.all)
                     Group {
-                        switch viewModel.schedules {
+                        switch viewModel.scheduleList {
                         case .idle, .loading:
                             ProgressView("loading...")
                         case let .loaded(schedules):
-                            if schedules.isEmpty {
+                            if schedules.data.isEmpty {
                                 Text("something wrong about API.")
                             } else {
                                 
                                 // MARK: Main List about schedules
-                                MainList(schedules: SortedSchedules(schedules: schedules))
+                                MainList(schedules: SortedSchedules(schedules: schedules.data))
 
                             }
                         case let .failed(error):

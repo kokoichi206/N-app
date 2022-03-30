@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 class BlogListViewModel: ObservableObject {
-    @Published private(set) var blogs: Stateful<[Blog]> = .idle
+    @Published private(set) var blogList: Stateful<BlogList> = .idle
 
     private var cancellables = Set<AnyCancellable>()
 
@@ -24,18 +24,18 @@ class BlogListViewModel: ObservableObject {
     private func loadBlogs() {
         BlogRepository().fetchBlogs()
             .handleEvents(receiveSubscription: { [weak self] _ in
-                self?.blogs = .loading
+                self?.blogList = .loading
             })
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { [weak self] completion in
                 switch completion {
                 case .failure(let error):
                     print("Error: \(error)")
-                    self?.blogs = .failed(error)
+                    self?.blogList = .failed(error)
                 case .finished: print("Finished")
                 }
             }, receiveValue: { [weak self] blogs in
-                self?.blogs = .loaded(blogs)
+                self?.blogList = .loaded(blogs)
             }
             ).store(in: &cancellables)
     }

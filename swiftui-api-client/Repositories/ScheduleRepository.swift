@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 struct ScheduleRepository {
-    func fetchSchedules() -> AnyPublisher<[Schedule], Error> {
+    func fetchSchedules() -> AnyPublisher<ScheduleList, Error> {
         ScheduleAPIClient().getSchedules()
     }
 }

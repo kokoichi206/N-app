@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 struct MemberRepository {
-    func fetchMembers() -> AnyPublisher<[Member], Error> {
+    func fetchMembers() -> AnyPublisher<MemberList, Error> {
         MemberAPIClient().getMembers()
     }
 }
