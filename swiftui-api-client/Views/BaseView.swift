@@ -26,11 +26,14 @@ struct BaseView: View {
                     .tag("text.bubble")
                 
                 BlogListView()
-                    .tag("newspaper")
+                    .tag("book")
                 
                 ScheduleListView()
                     .tag("calendar")
              
+                NewsListView()
+                    .tag("newspaper")
+                
                 Text("Formation")
                     .tag("person.3.fill")
                 
@@ -39,12 +42,13 @@ struct BaseView: View {
             }
             
             // Custom Tab Bar...
-            HStack(spacing: 50) {
+            HStack(spacing: 20) {
                 
                 // Tab Buttons...
                 TabButton(image: "person.text.rectangle")
-                TabButton(image: "newspaper")
+                TabButton(image: "book")
                 TabButton(image: "calendar")
+                TabButton(image: "newspaper")
                 TabButton(image: "person.3.fill")
                 TabButton(image: "gearshape.fill")
             }
