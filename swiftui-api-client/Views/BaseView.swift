@@ -35,14 +35,18 @@ struct BaseView: View {
                     .tag("newspaper")
                 
                 MovieListView()
-                    .tag("film.fill")
+                    .tag("film")
                 
-                Text("Formation")
-                    .tag("person.3.fill")
+                HandShakeListView()
+                    .tag("face.smiling")
+                
+                LiveListView()
+                    .tag("music.mic")
                 
                 Text("Settings")
                     .tag("gearshape.fill")
             }
+            
             
             // Custom Tab Bar...
             HStack(spacing: 20) {
@@ -52,8 +56,9 @@ struct BaseView: View {
                 TabButton(image: "book")
                 TabButton(image: "calendar")
                 TabButton(image: "newspaper")
-                TabButton(image: "film.fill")
-                TabButton(image: "person.3.fill")
+                TabButton(image: "film")
+                TabButton(image: "face.smiling")
+                TabButton(image: "music.mic")
                 TabButton(image: "gearshape.fill")
             }
             .frame(maxWidth: .infinity)

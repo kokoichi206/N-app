@@ -29,7 +29,6 @@
 		27B6EC4727F48A4A00F1A75A /* HandShake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B6EC4627F48A4A00F1A75A /* HandShake.swift */; };
 		27B6EC4927F48A5300F1A75A /* Live.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B6EC4827F48A5300F1A75A /* Live.swift */; };
 		27B6EC4B27F48A6200F1A75A /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B6EC4A27F48A6200F1A75A /* Comment.swift */; };
-		27B6EC4D27F48FC000F1A75A /* Kouen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B6EC4C27F48FC000F1A75A /* Kouen.swift */; };
 		27B6EC4F27F493F800F1A75A /* NewsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B6EC4E27F493F800F1A75A /* NewsRepository.swift */; };
 		27B6EC5127F4941700F1A75A /* CommentRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B6EC5027F4941700F1A75A /* CommentRepository.swift */; };
 		27B6EC5327F4942400F1A75A /* MovieRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B6EC5227F4942400F1A75A /* MovieRepository.swift */; };
@@ -39,6 +38,10 @@
 		27B6EC5B27F49E7400F1A75A /* NewsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B6EC5A27F49E7400F1A75A /* NewsListView.swift */; };
 		27B6EC5D27F49FF300F1A75A /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B6EC5C27F49FF300F1A75A /* MovieViewModel.swift */; };
 		27B6EC5F27F4A06700F1A75A /* MovieListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B6EC5E27F4A06700F1A75A /* MovieListView.swift */; };
+		27B6EC6127F4A35100F1A75A /* HandShakeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B6EC6027F4A35100F1A75A /* HandShakeViewModel.swift */; };
+		27B6EC6327F4A39B00F1A75A /* HandShakeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B6EC6227F4A39B00F1A75A /* HandShakeView.swift */; };
+		27B6EC6527F4A7D600F1A75A /* LiveViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B6EC6427F4A7D600F1A75A /* LiveViewModel.swift */; };
+		27B6EC6727F4A81700F1A75A /* LiveListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B6EC6627F4A81700F1A75A /* LiveListView.swift */; };
 		27D5ED2327E37697002D4DBC /* swiftui_api_clientApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5ED2227E37697002D4DBC /* swiftui_api_clientApp.swift */; };
 		27D5ED2527E37697002D4DBC /* MemberListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5ED2427E37697002D4DBC /* MemberListView.swift */; };
 		27D5ED2727E37698002D4DBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27D5ED2627E37698002D4DBC /* Assets.xcassets */; };
@@ -76,7 +79,6 @@
 		27B6EC4627F48A4A00F1A75A /* HandShake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandShake.swift; sourceTree = "<group>"; };
 		27B6EC4827F48A5300F1A75A /* Live.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Live.swift; sourceTree = "<group>"; };
 		27B6EC4A27F48A6200F1A75A /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
-		27B6EC4C27F48FC000F1A75A /* Kouen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kouen.swift; sourceTree = "<group>"; };
 		27B6EC4E27F493F800F1A75A /* NewsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsRepository.swift; sourceTree = "<group>"; };
 		27B6EC5027F4941700F1A75A /* CommentRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentRepository.swift; sourceTree = "<group>"; };
 		27B6EC5227F4942400F1A75A /* MovieRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRepository.swift; sourceTree = "<group>"; };
@@ -86,6 +88,10 @@
 		27B6EC5A27F49E7400F1A75A /* NewsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListView.swift; sourceTree = "<group>"; };
 		27B6EC5C27F49FF300F1A75A /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
 		27B6EC5E27F4A06700F1A75A /* MovieListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListView.swift; sourceTree = "<group>"; };
+		27B6EC6027F4A35100F1A75A /* HandShakeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandShakeViewModel.swift; sourceTree = "<group>"; };
+		27B6EC6227F4A39B00F1A75A /* HandShakeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandShakeView.swift; sourceTree = "<group>"; };
+		27B6EC6427F4A7D600F1A75A /* LiveViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveViewModel.swift; sourceTree = "<group>"; };
+		27B6EC6627F4A81700F1A75A /* LiveListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveListView.swift; sourceTree = "<group>"; };
 		27D5ED1F27E37697002D4DBC /* swiftui-api-client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swiftui-api-client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27D5ED2227E37697002D4DBC /* swiftui_api_clientApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftui_api_clientApp.swift; sourceTree = "<group>"; };
 		27D5ED2427E37697002D4DBC /* MemberListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberListView.swift; sourceTree = "<group>"; };
@@ -164,6 +170,8 @@
 				27B6EC3427EFAC5700F1A75A /* BlogDetailView.swift */,
 				27B6EC5A27F49E7400F1A75A /* NewsListView.swift */,
 				27B6EC5E27F4A06700F1A75A /* MovieListView.swift */,
+				27B6EC6227F4A39B00F1A75A /* HandShakeView.swift */,
+				27B6EC6627F4A81700F1A75A /* LiveListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -179,7 +187,6 @@
 				27B6EC4427F48A3B00F1A75A /* Movie.swift */,
 				27B6EC4627F48A4A00F1A75A /* HandShake.swift */,
 				27B6EC4827F48A5300F1A75A /* Live.swift */,
-				27B6EC4C27F48FC000F1A75A /* Kouen.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -216,6 +223,8 @@
 				27B6EC3027EF84B200F1A75A /* ScheduleViewModel.swift */,
 				27B6EC5827F4960E00F1A75A /* NewsViewModel.swift */,
 				27B6EC5C27F49FF300F1A75A /* MovieViewModel.swift */,
+				27B6EC6027F4A35100F1A75A /* HandShakeViewModel.swift */,
+				27B6EC6427F4A7D600F1A75A /* LiveViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -315,6 +324,7 @@
 			files = (
 				27D5ED5A27E9F63C002D4DBC /* BaseView.swift in Sources */,
 				27B6EC5527F4943300F1A75A /* HandShakeRepository.swift in Sources */,
+				27B6EC6327F4A39B00F1A75A /* HandShakeView.swift in Sources */,
 				27B6EC3727EFACC200F1A75A /* Blog+mock.swift in Sources */,
 				27B6EC2727EF7EFC00F1A75A /* BlogViewModel.swift in Sources */,
 				27B6EC2927EF7F4000F1A75A /* BlogRepository.swift in Sources */,
@@ -323,13 +333,13 @@
 				27B6EC3327EF851A00F1A75A /* ScheduleListView.swift in Sources */,
 				27B6EC3D27F4894200F1A75A /* CommentAPIClient.swift in Sources */,
 				27D5ED3727E37BDD002D4DBC /* MemberDetailView.swift in Sources */,
+				27B6EC6127F4A35100F1A75A /* HandShakeViewModel.swift in Sources */,
 				27B6EC5927F4960E00F1A75A /* NewsViewModel.swift in Sources */,
 				27B6EC4927F48A5300F1A75A /* Live.swift in Sources */,
 				27B6EC2B27EF824100F1A75A /* ScheduleAPIClient.swift in Sources */,
 				27B6EC3F27F4895500F1A75A /* MovieAPIClient.swift in Sources */,
 				27B6EC4F27F493F800F1A75A /* NewsRepository.swift in Sources */,
 				27D5ED3227E37740002D4DBC /* Member.swift in Sources */,
-				27B6EC4D27F48FC000F1A75A /* Kouen.swift in Sources */,
 				27B6EC5B27F49E7400F1A75A /* NewsListView.swift in Sources */,
 				27D5ED5427E8C051002D4DBC /* Stateful.swift in Sources */,
 				27B6EC4727F48A4A00F1A75A /* HandShake.swift in Sources */,
@@ -343,9 +353,11 @@
 				27B6EC4327F48A3000F1A75A /* News.swift in Sources */,
 				27B6EC2D27EF828A00F1A75A /* Schedule.swift in Sources */,
 				27B6EC5F27F4A06700F1A75A /* MovieListView.swift in Sources */,
+				27B6EC6727F4A81700F1A75A /* LiveListView.swift in Sources */,
 				27B6EC2327EF7CC600F1A75A /* Blog.swift in Sources */,
 				27B6EC2F27EF847200F1A75A /* ScheduleRepository.swift in Sources */,
 				27D5ED3A27E37D1A002D4DBC /* Member+mock.swift in Sources */,
+				27B6EC6527F4A7D600F1A75A /* LiveViewModel.swift in Sources */,
 				27B6EC4527F48A3B00F1A75A /* Movie.swift in Sources */,
 				27B6EC5127F4941700F1A75A /* CommentRepository.swift in Sources */,
 				27B6EC3927F4891E00F1A75A /* NewsAPIClient.swift in Sources */,

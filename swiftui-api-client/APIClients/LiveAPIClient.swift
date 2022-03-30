@@ -1,5 +1,5 @@
 //
-//  MovieAPIClient.swift
+//  LiveAPIClient.swift
 //  swiftui-api-client
 //
 //  Created by kansai okadome on 2022/03/30.
@@ -8,9 +8,9 @@
 import Foundation
 import Combine
 
-struct MovieAPIClient {
-    func getMovies() -> AnyPublisher<MovieList, Error> {
-        let url = URL(string: "https://www.nogizaka46.com/s/n46/api/list/movie?")!
+struct LiveAPIClient {
+    func getLives() -> AnyPublisher<LiveList, Error> {
+        let url = URL(string: "https://www.nogizaka46.com/s/n46/api/list/live?")!
 
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = "GET"
@@ -26,7 +26,7 @@ struct MovieAPIClient {
                 }
                 return Data(String(decoding: element.data, as: UTF8.self).dropFirst(4).dropLast(2).utf8)
             }
-            .decode(type: MovieList.self, decoder: JSONDecoder())
+            .decode(type: LiveList.self, decoder: JSONDecoder())
             .eraseToAnyPublisher()
     }
 }
