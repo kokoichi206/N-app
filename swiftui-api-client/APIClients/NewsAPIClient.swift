@@ -10,7 +10,7 @@ import Combine
 
 struct NewsAPIClient {
     func getNewsList() -> AnyPublisher<NewsList, Error> {
-        let url = URL(string: "https://www.nogizaka46.com/s/n46/api/list/news?dy=202203")!
+        let url = URL(string: "https://www.nogizaka46.com/s/n46/api/list/news?")!
 
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = "GET"

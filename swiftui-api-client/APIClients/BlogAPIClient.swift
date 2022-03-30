@@ -10,7 +10,7 @@ import Combine
 
 struct BlogAPIClient {
     func getBlogs() -> AnyPublisher<BlogList, Error> {
-        let url = URL(string: "https://www.nogizaka46.com/s/n46/api/list/blog")!
+        let url = URL(string: "https://www.nogizaka46.com/s/n46/api/list/blog?")!
 
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = "GET"

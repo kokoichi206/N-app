@@ -38,7 +38,7 @@ struct NewsListView: View {
                             } else {
                                 
                                 // MARK: Main List about newsList
-                                MainList(newsList: SortedNewsList(newsList: newsList.data))
+                                MainList(newsList: newsList.data)
 
                             }
                         case let .failed(error):

@@ -38,7 +38,7 @@ struct HandShakeListView: View {
                             } else {
                                 
                                 // MARK: Main List about handShakeList
-                                MainList(handShakeList: SortedHandShakeList(handShakeList: handShakeList.data))
+                                MainList(handShakeList: handShakeList.data)
 
                             }
                         case let .failed(error):
